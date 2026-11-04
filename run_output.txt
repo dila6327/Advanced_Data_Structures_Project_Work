@@ -1,0 +1,41 @@
+Real graph: 13838 edges
+
+=== 3459 edges, 1716 triangles ===
+order                sorted  height BST/AVL  steps BST/AVL  time BST/AVL (ms)  BST/AVL
+real                   0.26      66 / 9        4.5 / 3.7         41 / 41          1.02
+sorted                 0.00     126 / 7        8.9 / 3.6         67 / 41          1.63
+nearly sorted 5%       0.08      90 / 8        6.8 / 3.6         55 / 41          1.32
+nearly sorted 20%      0.25      53 / 9        5.2 / 3.6         46 / 42          1.10
+random                 0.51      15 / 8        4.2 / 3.6         39 / 41          0.96
+
+=== 6919 edges, 5268 triangles ===
+order                sorted  height BST/AVL  steps BST/AVL  time BST/AVL (ms)  BST/AVL
+real                   0.31      83 / 10       5.3 / 4.1        138 / 127         1.08
+sorted                 0.00     212 / 8       12.7 / 4.1        273 / 128         2.13
+nearly sorted 5%       0.08      88 / 9        9.0 / 4.1        201 / 128         1.56
+nearly sorted 20%      0.24      57 / 9        6.2 / 4.1        156 / 129         1.21
+random                 0.50      17 / 10       4.7 / 4.1        129 / 136         0.94
+
+=== 13838 edges, 14319 triangles ===
+order                sorted  height BST/AVL  steps BST/AVL  time BST/AVL (ms)  BST/AVL
+real                   0.30      96 / 10       6.2 / 4.5        409 / 359         1.14
+sorted                 0.00     255 / 8       17.8 / 4.5        947 / 360         2.63
+nearly sorted 5%       0.08     163 / 10      11.2 / 4.5        650 / 355         1.83
+nearly sorted 20%      0.25     119 / 10       7.1 / 4.5        453 / 361         1.25
+random                 0.50      19 / 10       5.3 / 4.5        373 / 355         1.05
+
+Saved: results.csv   (BST/AVL above 1 = AVL is faster)
+
+=== sorted keys 0, 1, 2, ... into one tree ===
+BST n=  1000:   0.029 s, height 1000
+AVL n=  1000:   0.003 s, height 10
+BST n=  2000:   0.119 s, height 2000
+AVL n=  2000:   0.006 s, height 11
+BST n=  4000:   0.479 s, height 4000
+AVL n=  4000:   0.012 s, height 12
+BST n=  8000:   1.930 s, height 8000
+AVL n=  8000:   0.026 s, height 13
+BST n= 16000:   7.904 s, height 16000
+AVL n= 16000:   0.056 s, height 14
+BST n=100000: not run, would take about 309 s (over our 60 s limit = TIMEOUT)
+AVL n=100000:   0.424 s, height 17
